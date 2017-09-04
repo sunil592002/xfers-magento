@@ -1,3 +1,4 @@
+alert('Hai Render Xfers');
 define(
     [
         'uiComponent',
