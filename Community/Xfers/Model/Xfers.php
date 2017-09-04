@@ -35,10 +35,9 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
         \Magento\Payment\Helper\Data $paymentData,
         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
         \Magento\Payment\Model\Method\Logger $logger,
-        \Magento\Framework\Module\ModuleListInterface $moduleList,
-        \Magento\Framework\Stdlib\DateTime\TimezoneInterface $localeDate,
-        \Magento\Directory\Model\CountryFactory $countryFactory,
-        array $data = array()
+        \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
+        \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
+        array $data = []
     ) {
         parent::__construct(
             $context,
@@ -48,8 +47,8 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
             $paymentData,
             $scopeConfig,
             $logger,
-            $moduleList,
-            $localeDate,
+            $resource,
+            $resourceCollection,
             null,
             null,
             $data
