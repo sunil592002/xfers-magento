@@ -4,7 +4,7 @@
  *
  */
 
-namespace community\Xfers\Model\Xfers;
+namespace community\Xfers\Model;
 
 class Xfers extends \Magento\Payment\Model\Method\AbstractMethod //Mage_Payment_Model_Method_Abstract
 {

@@ -5,7 +5,7 @@
             <xfers>
                 <active>1</active>
                 <api_url>https://sandbox.xfers.io/api/v2/payments</api_url>
-                <model>community\Xfers\Model\Xfers\Xfers</model>
+                <model>community\Xfers\Model\Xfers</model>
                 <order_status>1</order_status>
                 <title>Xfers</title>
                 <allowspecific>0</allowspecific>
