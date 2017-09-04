@@ -10,11 +10,17 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod //Mage_Payment_
 {
     const API_URL_TEST = 'https://sandbox.xfers.io/api/v2/payments';
 
-    protected $_customerSession = \Magento\Customer\Model\Session;
+    protected $_customerSession;
 
     protected $_code  = 'xfers';
     protected $_formBlockType = 'xfers_block_form';
     protected $_allowCurrencyCode = array('SGD');
+
+    public function __construct(
+        Magento\Customer\Model\Session $customerSession
+    ) {
+        $this->_customerSession = $customerSession;
+    }
 
     
     public function getUrl()
