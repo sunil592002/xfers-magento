@@ -17,7 +17,7 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod //Mage_Payment_
     protected $_allowCurrencyCode = array('SGD');
 
     public function __construct(
-        Magento\Customer\Model\Session $customerSession
+        \Magento\Customer\Model\Session $customerSession
     ) {
         $this->_customerSession = $customerSession;
     }
