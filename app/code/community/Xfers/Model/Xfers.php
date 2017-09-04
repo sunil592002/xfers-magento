@@ -4,7 +4,7 @@
  *
  */
 
-namespace Magento\Xfers\Model\Xfers;
+namespace community\Xfers\Model\Xfers;
 
 class Xfers extends \Magento\Payment\Model\Method\AbstractMethod //Mage_Payment_Model_Method_Abstract
 {
@@ -78,8 +78,8 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod //Mage_Payment_
 		$order_id = $this->getCheckout()->getLastRealOrderId();
 		
 		$memberPay_email = '';
-		if (Mage::app()->isInstalled() && Mage::getSingleton('customer/session')->isLoggedIn()) {            
-			$memberPay_email = Mage::getSingleton('customer/session')->getCustomer()->getEmail();
+		if (Mage::app()->isInstalled() && $this->getCustomerSession()->isLoggedIn()) {            
+			$memberPay_email = $this->getCustomerSession()->getCustomer()->getEmail();
         }
 		
 		
