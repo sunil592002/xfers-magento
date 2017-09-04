@@ -49,8 +49,6 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
             $logger,
             $resource,
             $resourceCollection,
-            null,
-            null,
             $data
         );
         
