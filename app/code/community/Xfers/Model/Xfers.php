@@ -10,9 +10,12 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod //Mage_Payment_
 {
     const API_URL_TEST = 'https://sandbox.xfers.io/api/v2/payments';
 
+    protected $_customerSession = \Magento\Customer\Model\Session;
+
     protected $_code  = 'xfers';
     protected $_formBlockType = 'xfers_block_form';
     protected $_allowCurrencyCode = array('SGD');
+
     
     public function getUrl()
     {
@@ -42,7 +45,17 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod //Mage_Payment_
      */
     public function getCheckout()
     {
-        return Mage::getSingleton('checkout/session');
+        return \Magento\Checkout\Model\Session;
+    }
+
+    /**
+     * Get customer session object
+     *
+     * @return \Magento\Customer\Model\Session
+     */
+    public function getCustomerSession()
+    {
+        return $this->_customerSession;
     }
 
     /**

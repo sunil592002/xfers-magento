@@ -1,7 +1,7 @@
 <?php
 
 
-class Xfers_Model_Xfers_Session extends Mage_Core_Model_Session_Abstract
+class Xfers_Model_Xfers_Session extends \Magento\Framework\Session\Generic
 {
     public function __construct()
     {
