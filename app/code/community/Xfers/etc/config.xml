@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <xfers>
+                <active>1</active>
+                <api_url>https://sandbox.xfers.io/api/v2/payments</api_url>
+                <model>Magento\Xfers\Model\Xfers</model>
+                <order_status>1</order_status>
+                <title>Xfers</title>
+                <allowspecific>0</allowspecific>
+            </xfers>
+        </payment>
+    </default>
+</config>
