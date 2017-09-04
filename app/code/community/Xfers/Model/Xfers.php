@@ -24,12 +24,12 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod //Mage_Payment_
         \Magento\Payment\Helper\Data $paymentData,
         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
         \Magento\Payment\Model\Method\Logger $logger,
-        array $data = [],
+        $data = null,
         \Magento\Customer\Model\Session $customerSession
     ) {
         parent::__construct(
             $context, $registry, $extensionFactory, $customAttributeFactory, $paymentData, 
-            $scopeConfig,$logger, null, null, $data
+            $scopeConfig,$logger, null, null
         );
 
         $this->_customerSession = $customerSession;
