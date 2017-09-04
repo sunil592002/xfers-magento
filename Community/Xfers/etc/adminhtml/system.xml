@@ -10,12 +10,36 @@
         <section id="payment">
             <group id="xfers" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Xfers</label>
+                <comment>
+                    <![CDATA[<br />
+                    <div class="custom-options">
+                    <div class="box">
+                                        
+                      <p>Xfers Magento Plugin v2.2</p>
+                    <p><b>Please remember to change the URL depending on your preferences (either for testing or production purpose).</b></p>
+                    
+                    <p><u><b>API URL</b></u></p>
+                    <p>Test URL:           https://sandbox.xfers.io/api/v2/payments</p>
+                    <p>Production URL:     https://www.xfers.io/api/v2/payments</p>
+                    </div>
+                    </div>
+                    ]]>
+                </comment>
                 <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Title</label>
+                </field>
+                <field id="api_key" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API Key</label>
+                </field>
+                <field id="api_secret" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API Secret</label>
+                </field>
+                <field id="api_url" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API URL</label>
                 </field>
                 <field id="order_status" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>New Order Status</label>
