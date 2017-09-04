@@ -1,6 +1,6 @@
 <?php
   \Magento\Framework\Component\ComponentRegistrar::register(
       \Magento\Framework\Component\ComponentRegistrar::MODULE,
-      'Xfers',
+      'community_Xfers',
       __DIR__
   );

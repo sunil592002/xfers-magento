@@ -1,5 +1,11 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Xfers" setup_version="2.0.0" active="true" />
+    <module name="community_Xfers" setup_version="2.0.0" active="true" />
+    <sequence>
+        <module name="Mage_Payment"/>
+    </sequence>
+    <depends>
+        <module name="Mage_Payment"/>
+    </depends>
 </config>
