@@ -11,11 +11,11 @@
                 <xfers>
                 <active>1</active>
                 <title>Xfers</title>
-                <order_status>pending_payment</order_status>
-                <instructions>Instruction.</instructions>
+                <order_status>1</order_status>
                 <payment_action>true</payment_action>
                 <model>Community\Xfers\Model\Xfers</model>
-                <group>offline</group>
+                <allowspecific>0</allowspecific>
+                <api_url>https://sandbox.xfers.io/api/v2/payments</api_url>
             </xfers>
             <!-- payment-config -->
         </payment>
