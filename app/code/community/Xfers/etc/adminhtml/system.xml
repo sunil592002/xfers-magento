@@ -40,7 +40,7 @@
                 </field>
                 <field id="order_status" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>New order status</label>
-                    <source_model>\community\Xfers\Model\Config\Source\Order\Status\Pendingpayment</source_model>
+                    <source_model>community\Xfers\Model\Config\Source\Order\Status\Pendingpayment</source_model>
                 </field>
                 <field id="sort_order" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>Sort order</label>
