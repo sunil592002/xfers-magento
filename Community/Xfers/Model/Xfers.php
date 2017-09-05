@@ -27,6 +27,21 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
      */
     protected $_isOffline = true;
 
+    /**
+     * Bank Transfer payment block paths
+     *
+     * @var string
+     */
+   // protected $_formBlockType = 'Magento\OfflinePayments\Block\Form\Banktransfer';
+
+    /**
+     * Instructions block path
+     *
+     * @var string
+     */
+   // protected $_infoBlockType = 'Magento\Payment\Block\Info\Instructions';
+    
+
     public function __construct(
         \Magento\Framework\Model\Context $context,
         \Magento\Framework\Registry $registry,
@@ -51,15 +66,26 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
             $resourceCollection,
             $data
         );
-        $log = new \Psr\Logger\LoggerInterface;
-
-        $log->debug( 'Key ' . $this->getConfigData( 'api_key' ) );
-        $log->debug( 'URL ' . $this->getConfigData( 'api_url' ) );
-        $log->debug( 'Secret ' . $this->getConfigData( 'api_secret' ) );
+        
+        $logger->debug( [ "response" => 'Key ' . $this->getConfigData( 'api_key' ) ] );
+        $logger->debug( [ "response" => 'URL ' . $this->getConfigData( 'api_url' ) ] );
+        $logger->debug( [ "response" => 'Secret ' . $this->getConfigData( 'api_secret' ) ] );
 
 
         //$api_key = ;
     }
+
+    /**
+     * Get instructions text from config
+     *
+     * @return string
+     */
+    public function getInstructions()
+    {
+        return trim($this->getConfigData('instructions'));
+    }
+
+
   
 
 }
