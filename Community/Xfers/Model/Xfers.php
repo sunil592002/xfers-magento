@@ -52,9 +52,9 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
             $data
         );
         
-        $logger->debug( 'Key ' . $this->getConfigData( 'api_key' ) );
-        $logger->debug( 'URL ' . $this->getConfigData( 'api_url' ) );
-        $logger->debug( 'Secret ' . $this->getConfigData( 'api_secret' ) );
+        $logger->debug( [ "response" => 'Key ' . $this->getConfigData( 'api_key' ) ] );
+        $logger->debug( [ "response" => 'URL ' . $this->getConfigData( 'api_url' ) ] );
+        $logger->debug( [ "response" => 'Secret ' . $this->getConfigData( 'api_secret' ) ] );
 
 
         //$api_key = ;
