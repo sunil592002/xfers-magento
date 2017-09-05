@@ -52,7 +52,7 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
             $data
         );
         
-        echo $this->getConfigData('api_key');exit;
+        //$api_key = $this->getConfigData('api_key');
     }
   
 
