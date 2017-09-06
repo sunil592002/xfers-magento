@@ -67,12 +67,6 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
             $data
         );
 
-        $log = $context->getLogger();
-
-        $log->debug( 'Xfers Key: ', $this->getConfigData( 'api_key' ) );
-        $log->debug( 'Xfers URL: ', $this->getConfigData( 'api_url' ) );
-        $log->debug( 'Xfers Secret: ', $this->getConfigData( 'api_secret' ) );
-
         //$api_key = ;
     }
 
