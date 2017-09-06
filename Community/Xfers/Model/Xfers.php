@@ -5,7 +5,7 @@
  */
 namespace Community\Xfers\Model;
 
-use Psr\Log\LoggerInterface as Logger;
+//use Psr\Log\LoggerInterface as Logger;
 
 /**
  * Pay In Store payment method model
@@ -53,7 +53,6 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
         \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
         \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
         array $data = [],
-        Logger $log
     ) {
         parent::__construct(
             $context,
@@ -67,6 +66,8 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
             $resourceCollection,
             $data
         );
+
+        $log = $context->getLogger();
 
         $log->debug( 'Xfers Key: ', $this->getConfigData( 'api_key' ) );
         $log->debug( 'Xfers URL: ', $this->getConfigData( 'api_url' ) );
