@@ -27,6 +27,8 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
      */
     protected $_isOffline = true;
 
+    private $psrLogger;
+
     /**
      * Bank Transfer payment block paths
      *
