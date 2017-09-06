@@ -67,13 +67,24 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
             $data
         );
 
-        $log = $context->getLogger();
+        //$log = $context->getLogger();
 
-        $log->debug( 'Xfers Key: ', 'testing' );
-        /*$log->debug( 'Xfers URL: ', $this->getConfigData( 'api_url' ) );
-        $log->debug( 'Xfers Secret: ', $this->getConfigData( 'api_secret' ) );*/
-
+        $this->getPsrLogger()->debug( 'Xfers Key: ');
         //$api_key = ;
+    }
+
+    /**
+     * @return \Psr\Log\LoggerInterface
+     *
+     * @deprecated
+     */
+    private function getPsrLogger()
+    {
+        if (null === $this->psrLogger) {
+            $this->psrLogger = \Magento\Framework\App\ObjectManager::getInstance()
+                ->get(\Psr\Log\LoggerInterface::class);
+        }
+        return $this->psrLogger;
     }
 
     /**
