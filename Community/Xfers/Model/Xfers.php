@@ -53,6 +53,7 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
         \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
         \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
         array $data = []
+        Logger $log
     ) {
         parent::__construct(
             $context,
@@ -67,11 +68,9 @@ class Xfers extends \Magento\Payment\Model\Method\AbstractMethod
             $data
         );
 
-        Logger $log;
-
-        $log->debug('Xfers Key: ', $this->getConfigData( 'api_key' ) );
-        $log->debug('Xfers URL: ', $this->getConfigData( 'api_url' ) );
-        $log->debug('Xfers Secret: ', $this->getConfigData( 'api_secret' ) );
+        $log->debug( 'Xfers Key: ', $this->getConfigData( 'api_key' ) );
+        $log->debug( 'Xfers URL: ', $this->getConfigData( 'api_url' ) );
+        $log->debug( 'Xfers Secret: ', $this->getConfigData( 'api_secret' ) );
 
         //$api_key = ;
     }
