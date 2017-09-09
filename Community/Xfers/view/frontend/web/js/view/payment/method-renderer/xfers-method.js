@@ -6,12 +6,11 @@
 /*global define*/
 define(
     [
-        'uiComponent',
         'Magento_Checkout/js/view/payment/default'
     ],
-    function (Component, payment) {
+    function (Component) {
         'use strict';
-        
+
         return Component.extend({
             defaults: {
                 template: 'Community_Xfers/payment/xfers'
