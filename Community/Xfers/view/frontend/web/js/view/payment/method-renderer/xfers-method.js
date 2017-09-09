@@ -21,7 +21,14 @@ define(
             /** Returns payment method instructions */
             getInstructions: function() {
                 return window.checkoutConfig.payment.instructions[this.item.method];
-            }
+            },
+
+            /**
+             * Get payment method code.
+             */
+            getCode: function () {
+                return this.item.method;
+            },
         });
     }
 );
