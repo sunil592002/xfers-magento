@@ -15,6 +15,20 @@ define(
             defaults: {
                 template: 'Community_Xfers/payment/xfers'
             },
+            currentBillingAddress: quote.billingAddress,
+            addressOptions: addressOptions,
+            customerHasAddresses: addressOptions.length > 1,
+
+            /**
+             * Init component
+             */
+            initialize: function () {
+                this._super();
+                quote.paymentMethod.subscribe(function () {
+                    checkoutDataResolver.resolveBillingAddress();
+                }, this);
+            },
+
 
             /** Returns send check to info */
             getMailingAddress: function() {
