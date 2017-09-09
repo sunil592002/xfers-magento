@@ -11,7 +11,7 @@ define(
     ],
     function (Component, payment) {
         'use strict';
-        alert(getData());
+        
         return Component.extend({
             defaults: {
                 template: 'Community_Xfers/payment/xfers'
