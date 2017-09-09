@@ -6,14 +6,17 @@
 /*global define*/
 define(
     [
+        'uiComponent',
         'Magento_Checkout/js/view/payment/default'
+        'Magento_Customer/js/model/customer',
     ],
-    function (Component) {
+    function (Component, payment, customer) {
         'use strict';
         return Component.extend({
             defaults: {
                 template: 'Community_Xfers/payment/xfers'
             },
+            isCustomerLoggedIn: customer.isLoggedIn,
 
             /** Returns payment method instructions */
             getInstructions: function() {
