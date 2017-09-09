@@ -6,9 +6,10 @@
 /*global define*/
 define(
     [
+        'Magento_Checkout/js/model/quote',
         'Magento_Checkout/js/view/payment/default'
     ],
-    function (Component) {
+    function (quote, Component) {
         'use strict';
 
         return Component.extend({
