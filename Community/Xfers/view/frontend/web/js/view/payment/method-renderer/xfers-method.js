@@ -7,8 +7,8 @@
 define(
     [
         'uiComponent',
-        'Magento_Checkout/js/view/payment/default'
-        'Magento_Customer/js/model/customer',
+        'Magento_Checkout/js/view/payment/default',
+        'Magento_Customer/js/model/customer'
     ],
     function (Component, payment, customer) {
         'use strict';
