@@ -11,7 +11,7 @@ define(
     ],
     function (quote, Component) {
         'use strict';
-
+        alert(quote.toSource());
         return Component.extend({
             defaults: {
                 template: 'Community_Xfers/payment/xfers'
