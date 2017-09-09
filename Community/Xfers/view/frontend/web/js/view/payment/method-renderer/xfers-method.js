@@ -11,14 +11,12 @@ define(
     ],
     function (quote, Component) {
         'use strict';
-        alert(quote.toSource());
+        //alert(quote.toSource());
         return Component.extend({
             defaults: {
                 template: 'Community_Xfers/payment/xfers'
             },
             currentBillingAddress: quote.billingAddress,
-            addressOptions: addressOptions,
-            customerHasAddresses: addressOptions.length > 1,
 
             /**
              * Init component
