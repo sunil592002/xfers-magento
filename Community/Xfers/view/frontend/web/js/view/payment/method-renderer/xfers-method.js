@@ -26,7 +26,7 @@ define(
                 return window.checkoutConfig.payment.checkmo.mailingAddress;
             },
 
-            getTelephone: function() {
+            getTelephone: function() {alert(customerData.get('customer')().firstname)
                 return customerData.get('customer')().telephone;
             }
 
