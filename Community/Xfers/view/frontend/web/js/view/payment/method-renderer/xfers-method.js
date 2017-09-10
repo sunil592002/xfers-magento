@@ -25,9 +25,8 @@ define(
                 return window.checkoutConfig.payment.checkmo.mailingAddress;
             },
 
-            getTelephone: function() {console.log(quote);
+            getTelephone: function() {alert('hai');console.log(quote);
                 return quote.billingAddress.telephone;
-                return customerData.get('customer')().telephone;
             }
 
            
