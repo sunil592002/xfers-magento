@@ -25,6 +25,13 @@ define(
                 return window.checkoutConfig.payment.checkmo.mailingAddress;
             },
 
+            /** Returns send check to info */
+            getTelephone: function() {alert(window.checkoutConfig.payment.checkmo.mailingAddress);
+                alert(window.checkoutConfig.payment.checkmo.telephone);
+                return window.checkoutConfig.payment.checkmo.mailingAddress;
+            },
+
+
            
         });
     }
