@@ -21,11 +21,21 @@
             <!-- ko template: getTemplate() --><!-- /ko -->
             <!--/ko-->
         </div>
+        <!-- ko ifnot: isCustomerLoggedIn() -->
+        <div class="control">
+            <label class="label">
+                <span><!-- ko i18n: 'Phone Number/Email Address:'--><!-- /ko --></span>
+            </label> <!-- ko text: getTelephone() --><!-- /ko -->Phone Number
+            <input type="text" id="card_holder_name" name="card_holder_name" class="input-text" style="width: 270px; margin: 8px 0 17px;" required >
+        </div>
+        <!--/ko-->
         <div class="checkout-agreements-block">
             <!-- ko foreach: $parent.getRegion('before-place-order') -->
                 <!-- ko template: getTemplate() --><!-- /ko -->
             <!--/ko-->
+            <!-- ko template: getData() --><!-- /ko -->test
         </div>
+
         <div class="actions-toolbar">
             <div class="primary">
                 <button class="action primary checkout"
