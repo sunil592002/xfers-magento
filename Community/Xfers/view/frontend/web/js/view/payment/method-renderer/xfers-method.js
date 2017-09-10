@@ -69,7 +69,7 @@ define(
                 return window.checkoutConfig.payment.checkmo.mailingAddress;
             },
 
-            getTelephone: function() {alert(customerData.get('customer')().telephone);
+            getTelephone: function() {alert('hai' + quote.billingAddress.telephone);
                 return quote.billingAddress.telephone;
             }
 
