@@ -11,7 +11,7 @@ define(
         'Magento_Customer/js/model/customer',
 
     ],
-    function (Component, quote) {
+    function (Component, quote, customer) {
         'use strict';
 
         return Component.extend({
