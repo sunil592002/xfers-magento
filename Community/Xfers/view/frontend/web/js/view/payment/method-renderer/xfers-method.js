@@ -10,7 +10,7 @@ define(
         'Magento_Customer/js/model/customer',
 
     ],
-    function (Component, customer) {
+    function (Component, payment, customer) {
         'use strict';
 
         return Component.extend({
