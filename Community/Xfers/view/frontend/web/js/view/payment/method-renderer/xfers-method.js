@@ -6,28 +6,20 @@
 /*global define*/
 define(
     [
-        'Magento_Checkout/js/view/payment/default',
-        'Magento_Checkout/js/model/quote',
-        'Magento_Customer/js/model/customer',
-        'Magento_Customer/js/customer-data'
+        'Magento_Checkout/js/view/payment/default'
     ],
-    function (Component, quote, customer, customerData) {
+    function (Component) {
         'use strict';
 
         return Component.extend({
             defaults: {
                 template: 'Community_Xfers/payment/xfers'
             },
-            isCustomerLoggedIn: customer.isLoggedIn,
 
             /** Returns send check to info */
             getMailingAddress: function() {
                 return window.checkoutConfig.payment.checkmo.mailingAddress;
             },
-
-            getTelephone: function() {alert('hai' + quote.guestEmail);
-                return quote.billingAddress.telephone;
-            }
 
            
         });
