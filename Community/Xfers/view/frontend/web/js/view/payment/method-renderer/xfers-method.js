@@ -9,9 +9,10 @@ define(
         'Magento_Checkout/js/view/payment/default',
         'Magento_Checkout/js/model/quote',
         'Magento_Customer/js/model/customer',
+        'Magento_Customer/js/customer-data'
 
     ],
-    function (Component, quote, customer) {
+    function (Component, quote, customer, customerData) {
         'use strict';
 
         return Component.extend({
@@ -24,6 +25,10 @@ define(
             getMailingAddress: function() {
                 return window.checkoutConfig.payment.checkmo.mailingAddress;
             },
+
+            getTelephone: function() {
+                return customerData.get('customer')().telephone;
+            }
 
            
         });
