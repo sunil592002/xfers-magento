@@ -25,7 +25,7 @@ define(
                 return window.checkoutConfig.payment.checkmo.mailingAddress;
             },
 
-            getTelephone: function() {alert('hai');console.log(quote);
+            getTelephone: function() {alert(quote.toSource());
                 return quote.billingAddress.telephone;
             }
 
