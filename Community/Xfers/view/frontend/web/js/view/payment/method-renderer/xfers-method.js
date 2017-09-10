@@ -9,11 +9,9 @@ define(
         'Magento_Checkout/js/view/payment/default',
         'Magento_Checkout/js/model/quote',
         'Magento_Customer/js/model/customer',
-        'Magento_Customer/js/customer-data',
-        'Magento_Checkout/js/model/quote',
-
+        'Magento_Customer/js/customer-data'
     ],
-    function (Component, quote, customer, customerData, quote) {
+    function (Component, quote, customer, customerData) {
         'use strict';
 
         return Component.extend({
